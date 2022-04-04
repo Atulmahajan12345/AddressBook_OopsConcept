@@ -9,10 +9,10 @@ public class AddressBook {
 	 private String zip;
 	 private int phoneNumber;
 	 private String email;
-	
+	 
 	public  AddressBook(String firstName, String lastname, String address, String city, String state, String zip,
 			int phoneNumber, String email) {
-		super();
+		super ();
 		this.firstName = firstName;
 		this.lastname = lastname;
 		this.address = address;
@@ -98,4 +98,4 @@ public class AddressBook {
 	 
 }
 
-	
+	 
