@@ -19,7 +19,8 @@ public class AddressBookService {
 					+ "\n 6 View Person on basis Of State or City "
 					+ "\n 7 Count of Person on basis Of State or City"
 					+ "\n 8 Sort contact on basis of Person name "
-					+ "\n 9 Quit"
+					+ "\n 9 Sort On the basis of city,state or Zip"
+					+ "\n 10 Quit"
 					);
 
 			int userChoice = scanner.nextInt();
@@ -73,6 +74,12 @@ public class AddressBookService {
 				break;
 			
 			case 9:
+				System.out.println("How you want to sort\n1 City \n2 State \n3 Zip");
+				int sortByWhich = scanner.nextInt();
+				addressBook.sortBY(sortByWhich);
+				break;
+
+			case 10:
 				System.out.println("Thanks For Using Us");
 				System.exit(0);
 				break;
