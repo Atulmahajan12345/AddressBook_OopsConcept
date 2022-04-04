@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class AddressBookService {
 	public static void main(String[] args)
 	{
-		Scanner scanner = new  Scanner(System.in);     
+		Scanner scanner = new  Scanner(System.in);
 		System.out.println("Welcome to Address Book");
 		AddressBookService contact = new AddressBookService();
 		while (true) {
 			System.out.println("Enter what you have to do");
-			System.out.println(" 1 Add Contact \n 2 Edit Contact \n 3 Display Contact \n 4 Quit");
+			System.out.println(" 1 Add Contact \n 2 Edit Contact \n 3 Delete Contact \n 4 Display Contact \n 5 Quit ");
 			int userChoice = scanner.nextInt();
 			switch (userChoice) 
 			{
 			case 1:				
-				contact.addContact();	
+				contact.addContact();				
 				break;
 			case 2:
 				System.out.println("Enter the Phone Number");
@@ -30,7 +30,20 @@ public class AddressBookService {
 					System.out.println("Contact not found");
 				}
 				break;
-			case 3:	
+			case 3:
+				System.out.println("Enter the Phone Number");
+				int phoneNumberToDelete = scanner.nextInt();
+				 boolean status = contact.deleteContact(phoneNumberToDelete);
+				 if(status)
+					{
+						System.out.println("Contact Deleted Successfully");
+					}
+					else
+					{
+						System.out.println("Contact not found");
+					}
+				 break;
+			case 4:	
 				contact.diaplayContacts();
 				break;
 			default:
@@ -41,9 +54,14 @@ public class AddressBookService {
 
 	}
 
-	private void addContact() {
+	private void diaplayContacts() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	private boolean deleteContact(int phoneNumberToDelete) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	private boolean editContact(int phoneNumber) {
@@ -51,7 +69,7 @@ public class AddressBookService {
 		return false;
 	}
 
-	private void diaplayContacts() {
+	private void addContact() {
 		// TODO Auto-generated method stub
 		
 	}
