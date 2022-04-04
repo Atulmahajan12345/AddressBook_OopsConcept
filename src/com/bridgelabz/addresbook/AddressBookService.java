@@ -7,7 +7,7 @@ public class AddressBookService {
 	public static void main(String[] args)
 	{
 		System.out.println("Welcome to Address Book");
-		AddressBookService contact = new AddressBookService();
+		AddressBookService addressBook = new AddressBookService();
 		while (true) {
 			System.out.println("Enter what you have to do");
 			System.out.println(" 1 Add Contact \n 2 Edit Contact \n 3 Delete Contact \n 4 Display Contact \n 5 Quit ");
@@ -15,21 +15,21 @@ public class AddressBookService {
 			switch (userChoice) 
 			{
 			case 1:				
-				contact.addContact();				
+				addressBook.addContact();				
 				break;
 			case 2:
 				System.out.println("Enter the Phone Number");
 				int phoneNumber = scanner.nextInt();
-				contact.editContact(phoneNumber);	
+				addressBook.editContact(phoneNumber);	
 
 				break;
 			case 3:
 				System.out.println("Enter the Phone Number");
 				int phoneNumberToDelete = scanner.nextInt();
-				contact.deleteContact(phoneNumberToDelete);
+				addressBook.deleteContact(phoneNumberToDelete);
 				break;
 			case 4:	
-				contact.diaplayContacts();
+				addressBook.displayContact();
 				break;
 			case 5:
 				System.out.println("Thanks For Using Us");
@@ -40,7 +40,11 @@ public class AddressBookService {
 			}
 		}
 	}
-	private void editContact(int phoneNumber) {
+	private void deleteContact(int phoneNumberToDelete) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void displayContact() {
 		// TODO Auto-generated method stub
 		
 	}
@@ -48,15 +52,9 @@ public class AddressBookService {
 		// TODO Auto-generated method stub
 		
 	}
-	private void deleteContact(int phoneNumberToDelete) {
+	private void editContact(int phoneNumber) {
 		// TODO Auto-generated method stub
 		
 	}
-	private void diaplayContacts() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-}
 
-	
+}
