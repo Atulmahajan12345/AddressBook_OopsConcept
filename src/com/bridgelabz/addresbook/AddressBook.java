@@ -1,49 +1,101 @@
 package com.bridgelabz.addresbook;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class AddressBook {
-	public static void main(String[] args) {
-		System.out.println("Welcome to the address book system");
-		ArrayList<Contact1> array = new ArrayList<Contact1>();
-		try (Scanner sc = new Scanner(System.in)) {
-			try (Scanner sc1 = new Scanner(System.in)) {
-				int choice;
-				do {
-					System.out.println("1.INSERT");
-					System.out.println("2.DISPLAY");
-					System.out.println("Enter your choice");
-					choice = sc.nextInt();
-
-					switch (choice) {
-					case 1:
-						System.out.print("Enter First Name: ");
-						String firstName = sc1.nextLine();
-						System.out.print("Enter last Name: ");
-						String lastName = sc1.nextLine();
-						System.out.print("Enter your address: ");
-						String address = sc1.nextLine();
-						System.out.print("Enter your city: ");
-						String city = sc1.nextLine();
-						System.out.print("Enter your state: ");
-						String state = sc1.nextLine();
-						System.out.print("Enter zip code : ");
-						int zipcode = sc.nextInt();
-						System.out.print("Enter phone number: ");
-						String phoneNo = sc1.nextLine();
-						System.out.print("Enter your email: ");
-						String email = sc1.nextLine();
-						Contact1 contact = new Contact1(firstName, lastName, address, city, state, zipcode, phoneNo,
-								email);
-						array.add(contact);
-						break;
-					case 2:
-						System.out.println(array);
-						break;
-					}
-				} while (choice != 0);
-				System.out.println("Invalid Choice!!!");
-			}
-		}
+	 private String firstName;
+	 private String lastname;
+	 private String address;
+	 private String city;
+	 private String state;
+	 private String zip;
+	 private int phoneNumber;
+	 private String email;
+	
+	public  AddressBook(String firstName, String lastname, String address, String city, String state, String zip,
+			int phoneNumber, String email) {
+		super();
+		this.firstName = firstName;
+		this.lastname = lastname;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
 	}
+
+	@Override
+	public String toString() {
+		return "Contact [firstName=" + firstName + ", lastname=" + lastname + ", address=" + address + ", city=" + city
+				+ ", state=" + state + ", zip=" + zip + ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public int getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(int phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+
+	 
 }
+
+	
