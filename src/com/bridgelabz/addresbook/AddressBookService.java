@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class AddressBookService {
 	public static void main(String[] args)
 	{
-		Scanner scanner = new  Scanner(System.in);
+		Scanner scanner = new  Scanner(System.in);     
 		System.out.println("Welcome to Address Book");
 		AddressBookService contact = new AddressBookService();
 		while (true) {
