@@ -18,7 +18,8 @@ public class AddressBookService {
 					+ "\n 5 Search Person on basis Of State or City "
 					+ "\n 6 View Person on basis Of State or City "
 					+ "\n 7 Count of Person on basis Of State or City"
-					+ "\n 8 Quit "
+					+ "\n 8 Sort contact on basis of Person name "
+					+ "\n 9 Quit"
 					);
 
 			int userChoice = scanner.nextInt();
@@ -68,6 +69,10 @@ public class AddressBookService {
 				break;
 				
 			case 8:
+				addressBook.sortContacts();
+				break;
+			
+			case 9:
 				System.out.println("Thanks For Using Us");
 				System.exit(0);
 				break;
